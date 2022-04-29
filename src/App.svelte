@@ -1,13 +1,25 @@
 <script>
-	let arr = [1, 2, 3, 4, 5];
-	let name = "Emma";
+	let feedback = [
+		{
+			id: 1,
+			rating: 10,
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.'
+		},
+		{
+			id: 2,
+			rating: 9,
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.'
+		},
+		{
+			id: 3,
+			rating: 8,
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.'
+		}
+	]
 </script>
 
 <main>
 	<h1>Hello!</h1>
-	{#each arr as a}
-		<h>{a}{name}</h>
-	{/each}
 </main>
 
 <style>
