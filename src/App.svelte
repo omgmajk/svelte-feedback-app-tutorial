@@ -29,10 +29,15 @@
 		feedback = feedback.filter((item) => item.id != itemId);
 	}
 
+	const addFeedback = (e) => {
+		const newFeedback = e.detail;
+		feedback = [newFeedback, ...feedback];
+	}
+
 </script>
 
 <main class="container"> <!-- Can have class directly on the <main> tag -->
-	<FeedbackForm />
+	<FeedbackForm on:add-feedback="{addFeedback}"/>
 	<FeedbackStats {count} {average} />
 	<FeedbackList {feedback} on:delete-feedback="{deleteFeedback}" /> <!-- feedback={feedback} is the same as {feedback}-->
 </main>
